@@ -4,7 +4,7 @@ A collection of simple games, like rock paper scissors and blackjack, which coul
 Author: Danny Ramasawmy
 
 ## Blackjack
-There are two versions of blackjack, one using functional programming and the other using object-oriented programming. The OOP approach will allow this to be easily integrated with PyGame for creating a user interface.
+There are two versions of blackjack, one using procedural programming and the other using object-oriented programming. The OOP approach will allow this to be easily integrated with PyGame for creating a user interface.
 
 ## Rock Paper Scissors
-Rock paper scissors uses functional programming.
+Rock paper scissors uses procedural programming.
