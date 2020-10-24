@@ -8,3 +8,7 @@ There are two versions of blackjack, one using functional programming and the ot
 
 ## Rock Paper Scissors
 Rock paper scissors uses functional programming.
+
+## Spelling Bee
+Solves the NY Times spelling Bee daily puzzle (see: https://www.nytimes.com/puzzles/spelling-bee). 
+Reads a dictionary of words (from: http://www.gwicks.net/dictionaries.htm) and finds matches with RegEx. 
