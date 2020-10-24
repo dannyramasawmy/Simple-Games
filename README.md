@@ -1,5 +1,5 @@
 # Simple-Games
-A collection of simple games, like rock paper scissors and blackjack, which could be used as a final project to help teach python to beginners and explore OOD.
+A collection of simple games, like rock paper scissors and blackjack, which could be used as a final project to help teach python to beginners and explore OOP python and different algorithms.
 
 Author: Danny Ramasawmy
 
