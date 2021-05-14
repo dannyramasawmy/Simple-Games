@@ -13,8 +13,8 @@ prepath = 'SpellingBee/'
 filename = prepath + 'english3.txt'
 
 # input characters
-specialCharacter = 'h'
-searchCharacters = 'meyalhc'
+specialCharacter = 'n'
+searchCharacters = 'mintbel'
 
 # compile search pattern
 pattern = re.compile(r"\b[" + searchCharacters + r"]{4,20}\b")
