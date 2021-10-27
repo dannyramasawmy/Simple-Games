@@ -1,13 +1,11 @@
 
 import random as rand
+import string
 
 
 def MakeCipher(SEED):
     # create a shuffled alphabet
-    asciiA = ord('a')
-    asciiZ = ord('z')
-    alphaRange = asciiZ - asciiA
-    letters = [chr(i + asciiA) for i in range(alphaRange + 1)]
+    letters = [letter for letter in string.ascii_lowercase]
     rand.Random(SEED).shuffle(letters)
 
     # create a dictionary lookup
@@ -18,10 +16,18 @@ def MakeCipher(SEED):
     return cipher
 
 
-def DecmalToBase13(input_):
-    return input_
+def DecmalToBase13(number):
+    conversion = ('0', '1', '2', '3', '4',
+                  '5', '6', '7', '8', '9', 'a', 'b', 'c')
+    return conversion[(number//13) % 13] + conversion[number % 13]
+
+
+def JumbleMessage(cleanMessage, seed):
+    cipher = MakeCipher(seed)
+    return [DecmalToBase13(cipher[letter]) for letter in MESSAGE if letter in cipher]
 
 
 SEED = 10
 
 MESSAGE = 'hello world!'
+print(f'Message: {JumbleMessage(MESSAGE, SEED)}')
