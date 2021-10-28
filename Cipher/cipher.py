@@ -24,10 +24,19 @@ def DecmalToBase13(number):
 
 def JumbleMessage(cleanMessage, seed):
     cipher = MakeCipher(seed)
-    return [DecmalToBase13(cipher[letter]) for letter in MESSAGE if letter in cipher]
+    obscureMessage = []
+    for letter in cleanMessage.lower():
+        if letter in cipher:
+            obscureMessage.append(DecmalToBase13(cipher[letter]))
+        else:
+            obscureMessage.append(letter)
+    return obscureMessage
 
 
 SEED = 10
 
 MESSAGE = 'hello world!'
-print(f'Message: {JumbleMessage(MESSAGE, SEED)}')
+for key, value in zip(MakeCipher(SEED).keys(), MakeCipher(SEED).values()):
+    print(f'k:{key} v:{value}')
+
+print(f'Message: {" ".join(str(i) for i in JumbleMessage(MESSAGE, SEED))}')
